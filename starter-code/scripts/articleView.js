@@ -107,9 +107,6 @@ articleView.create = function() {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  console.log(article);
-
-
   // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
   $('#articles').append(article.toHtml());
 
@@ -119,7 +116,7 @@ articleView.create = function() {
 
   // DONE: Show our export field, and export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   $('#export-field').show();
-  $('#article-json').val(JSON.stringify(article) + ',');
+  $('#article-json').val(JSON.stringify(article));
 };
 
 
